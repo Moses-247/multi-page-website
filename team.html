@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Team Building · Moses</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.png" alt="Brand logo" />
+        <div class="brand-title">Moses • Team building</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="dogs.html">Dogs & Puppies</a>
+        <a href="team.html" class="active">Team building</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="section">
+      <h1>Services</h1>
+      <p>Custom workshops, outdoor challenges in Kajiado County, and on-site facilitation designed to build trust and collaboration.</p>
+    </section>
+
+    <div class="grid">
+      <article class="card col-6">
+        <h3>Outdoor challenge day</h3>
+        <p>Full-day program with problem-solving stations and leadership rotations.</p>
+        <p><span class="badge">20–60 participants</span><span class="badge">Full-day</span></p>
+      </article>
+
+      <article class="card col-6">
+        <h3>On-site workshop</h3>
+        <p>Interactive session focused on communication, roles, and feedback loops.</p>
+        <p><span class="badge">10–30 participants</span><span class="badge">Half-day</span></p>
+      </article>
+    </div>
+
+    <section class="section">
+      <h2>Booking request</h2>
+      <form aria-label="Booking form">
+        <div class="field">
+          <label for="company">Company or team name</label>
+          <input id="company" type="text" name="company" />
+        </div>
+        <div class="field">
+          <label for="size">Team size</label>
+          <input id="size" type="text" name="size" placeholder="e.g., 25" />
+        </div>
+        <div class="field">
+          <label for="date">Preferred date</label>
+          <input id="date" type="text" name="date" placeholder="YYYY-MM-DD" />
+        </div>
+        <div class="field">
+          <label for="service">Service type</label>
+          <select id="service" name="service">
+            <option>Outdoor challenge day</option>
+            <option>On-site workshop</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Goals, constraints, location"></textarea>
+        </div>
+        <button class="button" type="submit">Request booking</button>
+        <p class="helper">Hook this into an email handler or calendar integration later.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Moses. All rights reserved.</div>
+  </footer>
+</body>
+</html>

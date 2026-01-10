@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dogs & Puppies · Moses</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.png" alt="Brand logo" />
+        <div class="brand-title">Moses • Dogs & Puppies</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="dogs.html" class="active">Dogs & Puppies</a>
+        <a href="team.html">Team building</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="section">
+      <h1>Available dogs & puppies</h1>
+      <p class="helper">Add filters (breed, age, price) and connect inquiries via WhatsApp or email.</p>
+    </section>
+
+    <div class="grid">
+      <article class="card col-4" aria-label="Listing">
+        <img src="images/dog-1.jpg" alt="Puppy photo" />
+        <h3>Golden Retriever</h3>
+        <p><span class="badge">8 weeks</span><span class="badge">Vaccinated</span></p>
+        <p>Friendly, playful, and family-ready. Ideal for active homes.</p>
+        <button class="button">Inquire</button>
+      </article>
+
+      <article class="card col-4" aria-label="Listing">
+        <img src="images/dog-2.jpg" alt="Puppy photo" />
+        <h3>German Shepherd</h3>
+        <p><span class="badge">12 weeks</span><span class="badge">Pedigree</span></p>
+        <p>Loyal and intelligent companion with strong training potential.</p>
+        <button class="button">Inquire</button>
+      </article>
+
+      <article class="card col-4" aria-label="Listing">
+        <img src="images/dog-3.jpg" alt="Puppy photo" />
+        <h3>Mixed Breed</h3>
+        <p><span class="badge">10 weeks</span><span class="badge">Rescue</span></p>
+        <p>Affectionate, healthy pup looking for a loving home.</p>
+        <button class="button">Inquire</button>
+      </article>
+    </div>
+
+    <section class="section">
+      <h2>Quick inquiry</h2>
+      <form aria-label="Inquiry form">
+        <div class="field">
+          <label for="pet">Pet of interest</label>
+          <select id="pet" name="pet">
+            <option value="golden-retriever">Golden Retriever</option>
+            <option value="german-shepherd">German Shepherd</option>
+            <option value="mixed-breed">Mixed Breed</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" type="text" name="name" placeholder="e.g., Moses" />
+        </div>
+        <div class="field">
+          <label for="contact">Contact (email or WhatsApp)</label>
+          <input id="contact" type="text" name="contact" placeholder="e.g., +2547..." />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you’re looking for"></textarea>
+        </div>
+        <button class="button" type="submit">Send inquiry</button>
+        <p class="helper">You can later wire this to an email service or WhatsApp API.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Moses. All rights reserved.</div>
+  </footer>
+</body>
+</html>
