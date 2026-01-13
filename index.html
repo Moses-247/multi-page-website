@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home ~ </title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home · Moses</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-<!-- header Start -->
+  <!-- header Start -->
     <header class="header">
         <div class="container">
             <div class="brand" aria-label="Site branding">
@@ -26,39 +25,54 @@
     </header>
 <!-- header End -->
 
-<!-- Main Start -->
- <main class="main container">
+  <main class="main container">
     <section class="section">
       <h1>Welcome</h1>
       <p>Explore dogs and puppies for sale, team building services, and my personal portfolio — all under one roof.</p>
     </section>
 
-    <div class="grid">
+    <div class="grid" aria-label="Quick links">
       <section class="section col-4">
-        <h2>Dogs & puppies</h2>
-        <p>Browse available pets with photos, details, and quick inquiry options.</p>
+        <h2>Dogs & Puppies</h2>
+        <img src="images/dog-hero-small.jpg"
+             srcset="images/dog-hero-small.jpg 480w, images/dog-hero-medium.jpg 800w, images/dog-hero-large.jpg 1200w"
+             sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+             alt="Golden Retriever puppy running in grass"
+             loading="lazy" />
         <a class="button" href="dogs.html">View listings</a>
       </section>
       <section class="section col-4">
-        <h2>Team building</h2>
-        <p>Discover engaging activities, workshops, and booking options for teams.</p>
+        <h2>Team Building</h2>
+        <img src="images/team-hero-small.jpg"
+             srcset="images/team-hero-small.jpg 480w, images/team-hero-medium.jpg 800w, images/team-hero-large.jpg 1200w"
+             sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+             alt="Group of people in outdoor team activity"
+             loading="lazy" />
         <a class="button" href="team.html">Explore services</a>
       </section>
       <section class="section col-4">
         <h2>Portfolio</h2>
-        <p>See my projects, skills, and contact details in one place.</p>
+        <img src="images/portfolio-hero-small.jpg"
+             srcset="images/portfolio-hero-small.jpg 480w, images/portfolio-hero-medium.jpg 800w, images/portfolio-hero-large.jpg 1200w"
+             sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+             alt="Laptop showing code editor"
+             loading="lazy" />
         <a class="button" href="portfolio.html">See portfolio</a>
       </section>
     </div>
   </main>
 
-<!-- Main End -->
+  <footer class="footer">© 2026 Moses. All rights reserved.</footer>
 
-<!-- footer start -->
-    <footer class="footer">
-        <div class="container">© 2026 Moses. All rights reserved.</div>
-    </footer>
-<!-- footer End -->
-
+  <script>
+    // Active nav state
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll(".nav a");
+      const current = window.location.pathname.split("/").pop();
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === current) link.classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>

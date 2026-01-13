@@ -3,79 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Team Building ·</title>
+  <title>Team Building · Moses</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <div class="brand">
-        <img src="images/logo.png" alt="Brand logo" />
-        <div class="brand-title"> • Team building</div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="dogs.html">Dogs & Puppies</a>
-        <a href="team.html" class="active">Team building</a>
-        <a href="portfolio.html">Portfolio</a>
-      </nav>
-    </div>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="dogs.html">Dogs & Puppies</a>
+      <a href="team.html">Team Building</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
   </header>
 
   <main class="main container">
     <section class="section">
-      <h1>Services</h1>
-      <p>Custom workshops, outdoor challenges in Kajiado County, and on-site facilitation designed to build trust and collaboration.</p>
+      <h1>Team Building Services</h1>
+      <p>Custom workshops, outdoor challenges, and on-site facilitation designed to build trust and collaboration.</p>
     </section>
 
-    <div class="grid">
+    <div class="grid" aria-label="Service options">
       <article class="card col-6">
-        <h3>Outdoor challenge day</h3>
+        <img src="images/outdoor-small.jpg"
+             srcset="images/outdoor-small.jpg 480w, images/outdoor-medium.jpg 800w, images/outdoor-large.jpg 1200w"
+             sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+             alt="Team solving outdoor challenge"
+             loading="lazy" />
+        <h3>Outdoor Challenge Day</h3>
         <p>Full-day program with problem-solving stations and leadership rotations.</p>
-        <p><span class="badge">20–60 participants</span><span class="badge">Full-day</span></p>
       </article>
 
       <article class="card col-6">
-        <h3>On-site workshop</h3>
+        <img src="images/workshop-small.jpg"
+             srcset="images/workshop-small.jpg 480w, images/workshop-medium.jpg 800w, images/workshop-large.jpg 1200w"
+             sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+             alt="Indoor workshop with group discussion"
+             loading="lazy" />
+        <h3>On-site Workshop</h3>
         <p>Interactive session focused on communication, roles, and feedback loops.</p>
-        <p><span class="badge">10–30 participants</span><span class="badge">Half-day</span></p>
       </article>
     </div>
-
-    <section class="section">
-      <h2>Booking request</h2>
-      <form aria-label="Booking form">
-        <div class="field">
-          <label for="company">Company or team name</label>
-          <input id="company" type="text" name="company" />
-        </div>
-        <div class="field">
-          <label for="size">Team size</label>
-          <input id="size" type="text" name="size" placeholder="e.g., 25" />
-        </div>
-        <div class="field">
-          <label for="date">Preferred date</label>
-          <input id="date" type="text" name="date" placeholder="YYYY-MM-DD" />
-        </div>
-        <div class="field">
-          <label for="service">Service type</label>
-          <select id="service" name="service">
-            <option>Outdoor challenge day</option>
-            <option>On-site workshop</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes" placeholder="Goals, constraints, location"></textarea>
-        </div>
-        <button class="button" type="submit">Request booking</button>
-        <p class="helper">Hook this into an email handler or calendar integration later.</p>
-      </form>
-    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">© 2026 Moses. All rights reserved.</div>
-  </footer>
+  <footer class="footer">© 2026 Moses. All rights reserved.</footer>
+
+  <script>
+    // Active nav state
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll(".nav a");
+      const current = window.location.pathname.split("/").pop();
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === current) link.classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>
