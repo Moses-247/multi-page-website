@@ -3,88 +3,141 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dogs & Puppies · </title>
+  <title>Dogs & Puppies · Moses</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Header + Nav -->
   <header class="header">
-    <div class="container">
-      <div class="brand">
-        <img src="images/logo.png" alt="Brand logo" />
-        <div class="brand-title">• Dogs & Puppies</div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="dogs.html" class="active">Dogs & Puppies</a>
-        <a href="team.html">Team building</a>
-        <a href="portfolio.html">Portfolio</a>
-      </nav>
-    </div>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="dogs.html">Dogs & Puppies</a>
+      <a href="team.html">Team Building</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
   </header>
 
+  <!-- Main content -->
   <main class="main container">
     <section class="section">
-      <h1>Available dogs & puppies</h1>
-      <p class="helper">Add filters (breed, age, price) and connect inquiries via WhatsApp or email.</p>
+      <h1>Available Dogs & Puppies</h1>
+      <p class="helper">Browse listings and use filters to find your perfect companion.</p>
     </section>
 
-    <div class="grid">
-      <article class="card col-4" aria-label="Listing">
-        <img src="images/dog-1.jpg" alt="Puppy photo" />
+    <!-- Filter controls -->
+    <section class="section" aria-label="Filter options">
+      <h2>Filter dogs</h2>
+      <label for="breed">Breed:</label>
+      <select id="breed">
+        <option value="">All</option>
+        <option value="golden-retriever">Golden Retriever</option>
+        <option value="german-shepherd">German Shepherd</option>
+        <option value="mixed-breed">Mixed Breed</option>
+      </select>
+
+      <label for="age">Max Age (weeks):</label>
+      <input type="number" id="age" placeholder="e.g. 12" />
+
+      <label for="price">Max Price ($):</label>
+      <input type="number" id="price" placeholder="e.g. 500" />
+
+      <button class="button" id="filterBtn">Apply Filters</button>
+    </section>
+
+    <!-- Dog listings -->
+    <div class="grid" aria-label="Dog listings">
+      <article class="card col-4" 
+               data-breed="golden-retriever" 
+               data-age="8" 
+               data-price="400"
+               aria-label="Golden Retriever puppy">
+        <img 
+          src="images/dog-1-small.jpg" 
+          srcset="images/dog-1-small.jpg 480w, images/dog-1-medium.jpg 800w, images/dog-1-large.jpg 1200w" 
+          sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+          alt="Golden Retriever puppy sitting on grass"
+          loading="lazy" />
         <h3>Golden Retriever</h3>
         <p><span class="badge">8 weeks</span><span class="badge">Vaccinated</span></p>
         <p>Friendly, playful, and family-ready. Ideal for active homes.</p>
         <button class="button">Inquire</button>
       </article>
 
-      <article class="card col-4" aria-label="Listing">
-        <img src="images/dog-2.jpg" alt="Puppy photo" />
+      <article class="card col-4" 
+               data-breed="german-shepherd" 
+               data-age="12" 
+               data-price="600"
+               aria-label="German Shepherd puppy">
+        <img 
+          src="images/dog-2-small.jpg" 
+          srcset="images/dog-2-small.jpg 480w, images/dog-2-medium.jpg 800w, images/dog-2-large.jpg 1200w" 
+          sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+          alt="German Shepherd puppy standing alert"
+          loading="lazy" />
         <h3>German Shepherd</h3>
         <p><span class="badge">12 weeks</span><span class="badge">Pedigree</span></p>
         <p>Loyal and intelligent companion with strong training potential.</p>
         <button class="button">Inquire</button>
       </article>
 
-      <article class="card col-4" aria-label="Listing">
-        <img src="images/dog-3.jpg" alt="Puppy photo" />
+      <article class="card col-4" 
+               data-breed="mixed-breed" 
+               data-age="10" 
+               data-price="250"
+               aria-label="Mixed breed puppy">
+        <img 
+          src="images/dog-3-small.jpg" 
+          srcset="images/dog-3-small.jpg 480w, images/dog-3-medium.jpg 800w, images/dog-3-large.jpg 1200w" 
+          sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px"
+          alt="Mixed breed puppy with floppy ears"
+          loading="lazy" />
         <h3>Mixed Breed</h3>
         <p><span class="badge">10 weeks</span><span class="badge">Rescue</span></p>
         <p>Affectionate, healthy pup looking for a loving home.</p>
         <button class="button">Inquire</button>
       </article>
     </div>
-
-    <section class="section">
-      <h2>Quick inquiry</h2>
-      <form aria-label="Inquiry form">
-        <div class="field">
-          <label for="pet">Pet of interest</label>
-          <select id="pet" name="pet">
-            <option value="golden-retriever">Golden Retriever</option>
-            <option value="german-shepherd">German Shepherd</option>
-            <option value="mixed-breed">Mixed Breed</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="name">Your name</label>
-          <input id="name" type="text" name="name" placeholder="e.g., Moses" />
-        </div>
-        <div class="field">
-          <label for="contact">Contact (email or WhatsApp)</label>
-          <input id="contact" type="text" name="contact" placeholder="e.g., +2547..." />
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us what you’re looking for"></textarea>
-        </div>
-        <button class="button" type="submit">Send inquiry</button>
-        <p class="helper">You can later wire this to an email service or WhatsApp API.</p>
-      </form>
-    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">© 2026 Moses. All rights reserved.</div>
+    © 2026 Moses. All rights reserved.
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Active nav state
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll(".nav a");
+      const current = window.location.pathname.split("/").pop();
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === current) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+    // Filters
+    document.getElementById("filterBtn").addEventListener("click", () => {
+      const breed = document.getElementById("breed").value;
+      const age = parseInt(document.getElementById("age").value);
+      const price = parseInt(document.getElementById("price").value);
+
+      document.querySelectorAll(".card").forEach(card => {
+        const cardBreed = card.dataset.breed;
+        const cardAge = parseInt(card.dataset.age);
+        const cardPrice = parseInt(card.dataset.price);
+
+        let visible = true;
+        if (breed && cardBreed !== breed) visible = false;
+        if (age && cardAge > age) visible = false;
+        if (price && cardPrice > price) visible = false;
+
+        card.style.display = visible ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
